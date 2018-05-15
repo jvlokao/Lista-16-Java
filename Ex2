@@ -1,0 +1,27 @@
+package lista16;
+import java.util.Scanner;
+public class Ex2 {
+
+	public static void main(String[] args) {
+		int numerointeiro;
+		double numeroreal, result;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insira um numero real");
+		numeroreal = entrada.nextDouble();
+		System.out.println("Insira um numero inteiro");
+		numerointeiro = entrada.nextInt();
+		result = realelevadointeiro(numeroreal,numerointeiro);
+		System.out.println("O resultado do numero real elevado ao inteiro é "+ result);
+	}	
+	
+	public static double realelevadointeiro(double numreal, int numint){
+		double resultado = numreal;
+		int cont;
+		for(cont=2; cont<=numint; cont++){
+			resultado *= numreal;
+		}
+		return resultado;
+		
+				
+	}
+}
