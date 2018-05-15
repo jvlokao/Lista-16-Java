@@ -1,0 +1,25 @@
+package lista16;
+
+import java.util.Scanner;
+
+public class Ex5 {
+
+	public static void main(String[] args) {
+		int numero,numeroabsoluto;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insira um numero para verificar sua forma absoluta");
+		numero = entrada.nextInt();
+		numeroabsoluto = calcularmodulo(numero);
+		System.out.println("o modulo desse numero é "+numeroabsoluto);
+	}
+	
+	public static int calcularmodulo(int num){
+		int modulo = 0;
+		if(num<0){
+			modulo = num*(-1);
+		}else{
+			modulo = num;
+		}
+		return modulo;
+	}
+}
