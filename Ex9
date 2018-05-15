@@ -1,0 +1,29 @@
+package lista16;
+
+import java.util.Scanner;
+
+public class Ex9 {
+
+	public static void main(String[] args) {
+		int num1,num2,soma;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insira 2 numeros inteiros, o primeiro numero tem que ser o menor");
+		num1 = entrada.nextInt();
+		num2 = entrada.nextInt();
+		if(num2<num1){
+			System.out.println("ERRO");
+		}else{
+			soma = calcularSoma(num1,num2);
+			System.out.println("a soma dos numeros nesse intervalo é "+soma);
+		}
+			
+	}
+	
+	public static int calcularSoma(int n1,int n2){
+		int result=0,cont;
+		for(cont = n1; cont<=n2; cont++){
+			result += cont;
+		}
+		return result;
+	}
+}
