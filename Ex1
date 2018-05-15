@@ -1,0 +1,24 @@
+package lista16;
+import java.util.Scanner;
+public class Ex1 {
+
+	public static void main(String[] args) {
+		int hrs,totalhrs,min,seg;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insira a duração do filme em hrs, minutos e segundos respectivamente");
+		hrs = entrada.nextInt();
+		min = entrada.nextInt();
+		seg = entrada.nextInt();
+		totalhrs = totaldesegundos(hrs,min,seg);
+		System.out.println("A duração do filme em segundos é "+totalhrs+" Segundos.");
+
+	}
+	
+	public static int totaldesegundos(int horas, int minutos, int segundos){
+		int total;
+		total = horas * 3600;
+		total += minutos *60;
+		total += segundos;
+		return total;
+	}
+}
