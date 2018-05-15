@@ -1,0 +1,47 @@
+package lista16;
+
+import java.util.Scanner;
+
+public class Ex7 {
+
+	public static void main(String[] args) {
+		int jogador1,jogador2;
+		int vencedor = 0;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("0 = Pedra 1 = Papel 2 = Tesoura");
+		System.out.println("jogador 1 Insira sua jogada");
+		jogador1 = entrada.nextInt();
+		System.out.println("Jogador 2 Insira sua jogada");
+		jogador2 = entrada.nextInt();
+		if(jogador1 == jogador2){
+			System.out.println("EMPATE");
+		}else{
+			vencedor = jogo(jogador1,jogador2);
+			if(vencedor==0){
+				System.out.println("Jogo invalido, Valor nao existente inserido");
+			}else{
+			System.out.println("O vencedor foi o jogador "+vencedor);
+			}
+		}
+	}
+
+	public static int jogo(int player1,int player2){
+		int ganhador = 0;
+		if((player1 == 0)&&(player2 == 1)){
+			ganhador = 2;
+		}else if((player1 == 1)&&(player2 == 2)){
+			ganhador = 2;
+		}else if((player1 == 2)&&(player2 == 3)){
+			ganhador = 2;
+		}else if((player1 == 0)&&(player2 == 2)){
+			ganhador = 1;
+		}else if((player1 == 1)&&(player2 == 0)){
+			ganhador = 1;
+		}else if((player1 == 2)&&(player2 == 1)){
+			ganhador = 1; 
+		}else{
+			ganhador = 0;
+		}
+		return ganhador;
+	}
+}
