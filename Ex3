@@ -1,0 +1,25 @@
+package lista16;
+import java.util.Scanner;
+public class Ex3 {
+
+	public static void main(String[] args) {
+		int razao,termo1,ndetermos,somatermos;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insira o primeiro termo da PA");
+		termo1 = entrada.nextInt();
+		System.out.println("Insira a razão da PA");
+		razao = entrada.nextInt();
+		System.out.println("Insira o numero total de termos");
+		ndetermos = entrada.nextInt();
+		somatermos = calcularSomaPA(termo1,razao,ndetermos);
+		System.out.println("A soma dos termos dessa PA é " + somatermos);
+		
+	}
+
+	public static int calcularSomaPA(int num,int r,int n){
+		int soma,ultimotermo;
+		ultimotermo = num+(r*(n-1));
+		soma = ((num+ultimotermo)*n)/2;
+		return soma;
+	}
+}
