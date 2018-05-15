@@ -1,0 +1,31 @@
+package lista16;
+import java.util.Scanner;
+public class Ex4 {
+
+	public static void main(String[] args) {
+		double valor,valorfinal;
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Insira o valor inicial do produto");
+		valor = entrada.nextInt();
+		valorfinal = calcularInflaçao(valor);
+		if(valorfinal>0){
+			System.out.println("o valor final do produto é "+valorfinal);
+		}else{
+			System.out.println("Valor Invalido");
+		}
+		
+
+	}
+
+	public static double calcularInflaçao(double valorinicial){
+		double valorfim = 0;
+		if(valorinicial<100){
+			valorfim = (valorinicial + ((valorinicial/10)));
+		}else if(valorinicial >= 100){
+			valorfim = (valorinicial + (2*(valorinicial/10)));
+		}else{
+			valorfim = -100;
+		}
+		return valorfim;
+	}
+}
